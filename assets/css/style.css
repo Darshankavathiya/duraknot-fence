@@ -1,0 +1,278 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Hind", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #106eea;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3b8af2;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-size: 18px;
+  color: #000;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #106eea;
+  border-top-color: #e2eefd;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: #fff;
+  transition: all 0.5s;
+  z-index: 997;
+  height: 100px;
+}
+
+#header.fixed-top {
+  height: 70px;
+}
+
+.header-button a {
+  padding: 12px 18px;
+  font-family: "Albert Sans", sans-serif;
+  background-color: #C62127;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+.scrolled-offset {
+  margin-top: 70px;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-title .title {
+  font-family: "Hind", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #B31010;
+}
+
+
+/*--------------------------------------------------------------
+# Second Fold
+--------------------------------------------------------------*/
+#second_fold {
+  background-image: url(../img/Background-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.fold-2-image img {
+  border-radius: 12px;
+}
+
+.knot {
+  margin-bottom: 15px;
+}
+
+.knot-title {
+  font-family: "Hind", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding-left: 35px;
+  position: relative;
+}
+
+.knot-title:before {
+  content: "";
+  background-image: url(../img/Mark.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.knot span {
+  padding-left: 35px;
+  font-size: 18px;
+}
+
+.fold-2-boxes img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.fold-2-boxes p {
+  background-color: #165E23;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/*--------------------------------------------------------------
+# Third Fold
+--------------------------------------------------------------*/
+#third_fold {
+  background-image: url(../img/Background-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.fold-3-boxes img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.fold-3-boxes p {
+  font-size: 20px;
+}
+
+/*--------------------------------------------------------------
+# Last Fold
+--------------------------------------------------------------*/
+#last_fold {
+  background-image: url(../img/Last-Backgroud.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 900px;
+}
+
+.fold-4-forms .zcwf_col_fld input,
+.fold-4-forms .zcwf_col_fld textarea {
+  width: 100%;
+  border-radius: 8px;
+  padding: 14px 12px;
+}
+
+.fold-4-forms .zcwf_col_fld {
+  margin-bottom: 15px;
+}
+
+::placeholder {
+  color: #000;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#formsubmit {
+  width: 195px;
+  border: none;
+  background-color: #165E23;
+  color: #fff;
+  padding: 16px 10px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+@media (max-width: 1400px) {
+
+  #last_fold {
+    height: 1000px;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .section-title .title {
+    font-size: 35px;
+  }
+
+  .mobile-slider .swiper-wrapper {
+    display: flex;
+  }
+
+  .mobile-slider {
+    padding-bottom: 20px;
+  }
+
+}
